@@ -13,6 +13,7 @@
     crossorigin="anonymous"></script>
 
     <script src="https://secure.mlstatic.com/sdk/javascript/v1/mercadopago.js"></script>
+    <script src="https://www.mercadopago.com/v2/security.js" view="home"></script>
 
 
     <link rel="stylesheet" href="./assets/category-landing.css" media="screen, print">
@@ -185,6 +186,14 @@
                                           "street_number" => 1602,
                                           "zip_code" => "03940"
                                         );
+
+                                        //BACK_URL
+                                        $preference->back_urls = array(
+                                            "success" => "https://thenexusg-mp-commerce-php.herokuapp.com/success",
+                                            "failure" => "https://thenexusg-mp-commerce-php.herokuapp.com/failure",
+                                            "pending" => "https://thenexusg-mp-commerce-php.herokuapp.com/pending"
+                                        );
+                                        $preference->auto_return = "approved";
 
                                         //prueba de actualizacion en git
                                         ?>
