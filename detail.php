@@ -148,6 +148,17 @@
                                         $item->title = $_POST['title'];
                                         $item->quantity =  $_POST['unit'];
                                         $item->unit_price =  $_POST['price'];
+
+                                        $preference->payment_methods = array(
+                                            "excluded_payment_methods" => array(
+                                              array("id" => "master")
+                                            ),
+                                            "excluded_payment_types" => array(
+                                              array("id" => "ticket")
+                                            ),
+                                            "installments" => 12
+                                          );
+                                          
                                         $preference->items = array($item);
                                         $preference->save();
 
