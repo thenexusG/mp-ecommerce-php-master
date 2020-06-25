@@ -145,7 +145,10 @@
 
                                         // Crea un ítem en la preferencia
                                         $item = new MercadoPago\Item();
+                                        $item->id = "1234";
                                         $item->title = $_POST['title'];
+                                        $item->description = "Dispositivo móvil de Tienda e-commerce";
+                                        $item->picture_url = $_POST['img'];
                                         $item->quantity =  $_POST['unit'];
                                         $item->unit_price =  $_POST['price'];
 
@@ -159,6 +162,9 @@
                                             ),
                                             "installments" => 6
                                           );
+                                        
+                                        //email del creador del examen
+                                        $preference->external_reference = "uriel-g.s_@live.com";
 
                                         $preference->items = array($item);
                                         $preference->save();
