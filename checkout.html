@@ -1,55 +1,27 @@
 <!DOCTYPE html>
-
-
-
     <head>
-
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
         <meta name="viewport" content="width=1024">
-
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
         <meta name="format-detection" content="telephone=no">
-
-        
-
         <title>E-commerce</title>
-
-
-
     </head>
 
     <body>
-
         <div>
-
             <form action="/procesar_pago" method="post" id="pay" name="pay" >
-
                 <fieldset>
-
                     <p>
-
                         <label for="description">Descripción</label>                        
-
                         <input type="text" name="description" id="description" value="Ítem seleccionado"/>
-
                     </p>                    
-
                     <p>
-
                         <label for="transaction_amount">Monto a pagar</label>                        
-
                         <input name="transaction_amount" id="transaction_amount" value="100"/>
-
                     </p>
-
                     <p>
-
                         <label for="cardNumber">Número de la tarjeta</label>
-
                         <input type="text" id="cardNumber" data-checkout="cardNumber" onselectstart="return false" onpaste="return false" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off />
-
                     </p>
 
                     <p>
@@ -142,7 +114,7 @@
 
 <script>
 
-    window.Mercadopago.setPublishableKey("YOUR_PUBLIC_KEY");
+    window.Mercadopago.setPublishableKey("APP_USR-158fff95-0bdf-4149-9abc-c8b0ac7f289f");
 
     
 
