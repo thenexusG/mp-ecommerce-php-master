@@ -149,6 +149,7 @@
                                         $item->quantity =  $_POST['unit'];
                                         $item->unit_price =  $_POST['price'];
 
+                                        //limitar metodos de pago y quitar ATM
                                         $preference->payment_methods = array(
                                             "excluded_payment_methods" => array(
                                               array("id" => "amex")
@@ -161,6 +162,23 @@
 
                                         $preference->items = array($item);
                                         $preference->save();
+
+                                        //   datos del comprador              
+                                        $payer = new MercadoPago\Payer();
+                                        $payer->name = "Lalo";
+                                        $payer->surname = "Landa";
+                                        $payer->email = "test_user_58295862@testuser.com";
+                                        $payer->date_created = "2018-06-02T12:58:41.425-04:00";
+                                        $payer->phone = array(
+                                          "area_code" => "52",
+                                          "number" => "5549737300"
+                                        );
+
+                                        $payer->address = array(
+                                          "street_name" => "Insurgentes Sur",
+                                          "street_number" => 1602,
+                                          "zip_code" => "03940"
+                                        );
 
                                         //prueba de actualizacion en git
                                         ?>
