@@ -151,14 +151,14 @@
 
                                         $preference->payment_methods = array(
                                             "excluded_payment_methods" => array(
-                                              array("id" => "master")
+                                              array("id" => "amex")
                                             ),
                                             "excluded_payment_types" => array(
-                                              array("id" => "ticket")
+                                              array("id" => "atm")
                                             ),
-                                            "installments" => 12
+                                            "installments" => 6
                                           );
-                                          
+
                                         $preference->items = array($item);
                                         $preference->save();
 
