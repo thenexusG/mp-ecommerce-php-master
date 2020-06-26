@@ -187,13 +187,14 @@
                                           "zip_code" => "03940"
                                         );
 
-                                        //BACK_URL
+                                        //BACK_URL 
+                                        /*
                                         $preference->back_urls = array(
                                             "success" => "https://thenexusg-mp-commerce-php.herokuapp.com/success",
                                             "failure" => "https://thenexusg-mp-commerce-php.herokuapp.com/failure",
                                             "pending" => "https://thenexusg-mp-commerce-php.herokuapp.com/pending"
                                         );
-                                        $preference->auto_return = "approved";
+                                        $preference->auto_return = "approved";*/
 
                                         //prueba de actualizacion en git
                                         ?>
