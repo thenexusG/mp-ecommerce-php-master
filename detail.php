@@ -203,6 +203,20 @@
                                         <script
                                         src="https://www.mercadopago.com.mx/integrations/v1/web-payment-checkout.js"
                                         data-preference-id="<?php echo $preference->id; ?>">
+
+                                            window.addEventListener("message", (event) => {
+                                            if (event.origin !== 'https://www.mercadopago.com.mx' || ! event.data.type) {
+                                                return;
+                                            }
+
+                                            let dataType = event.data.type; // "close", "submit", etc...
+
+                                            if (dataType === 'submit') {
+                                                // Tu funcionalidad a ejecutar...
+                                                const paymentData = event.data.value; // Es un arreglo con la respuesta del pago procesado.
+                                                return;
+                                            }
+                                            });
                                         </script>
                                     </form>
 
